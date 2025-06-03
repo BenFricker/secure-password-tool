@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- Begin: Main Div -->
+    <div class="container">
+      <h1>Password Strength Checker</h1>
+
+      <!-- Begin Div: Password Input  -->
+      <div class="password-input-group">
+        <label for="password-input">Enter your password:</label>
+        <input
+        type="password"
+        id="password-input"
+        placeholder="Type your password here...">
+        <button style="align-items: center; display: flex;"
+        id="toggle-password-visibility">🙈</button>
+      </div>
+      <!-- End Div: Password Input  -->
+
+      <!-- Begin Div: Strength Indicator Bar -->
+      <div class="strength-indicator">
+        <div class="strength-bar" id="strength-bar"></div>
+      </div>
+      <!-- End Div: Strength Indicator Bar -->
+
+      <!-- Begin Div: Feedback Messages -->
+      <div class="feedback-messages" id="feedback-messages">
+        <p class="feedback-item requirement-length">Minimum 8 characters</p>
+        <p class="feedback-item requirement-uppercase">At least one uppercase letter</p>
+        <p class="feedback-item requirement-lowercase">At least one lowercase letter</p>
+        <p class="feedback-item requirement-number">At least one number</p>
+        <p class="feedback-item requirement-symbol">At least one symbol</p>
+      </div>
+      <!-- End Div: Feedback Messages -->
+
+      <!-- Begin Outer Div: Generate Password -->
+      <div class="password-generator-options">
+
+        <div>
+          <h3 class="password-generator-container">Generate Secure Password</h3>
+        </div>
+
+        <label for="password-length">Password Length:</label>
+        <input type="number" id="password-length" value="12" min="8" max="64">
+
+        <!-- Begin Inner Div: Generate Password Checkboxes -->
+        <div class="checkbox-group">
+
+          <!-- 1. Uppercase Checkbox -->
+           <label for="include-uppercase">Uppercase:</label>
+          <input type="checkbox" id="include-uppercase" checked>
+
+          <!-- 2. Lowercase Checkbox -->
+          <label for="include-lowercase">Lowercase:</label>
+          <input type="checkbox" id="include-lowercase" checked>
+
+          <!-- 3. Numbers Checkbox -->
+          <label for="include-numbers">Numbers:</label>
+          <input type="checkbox" id="include-numbers" checked>
+
+          <!-- 4. Symbols Checkbox -->
+          <label for="include-symbols">Symbols:</label>
+          <input type="checkbox" id="include-symbols" checked>
+        <!-- End Inner Div: Generate Password Checkboxes -->
+        </div>
+
+        <button id="generate-password-btn">Generate Password</button>
+
+      <!-- End Outer Div: Generate Password -->
+      </div>
+
+      <!-- Begin Div: Suggestions -->
+      <div class="suggestions" id="suggestions"></div>
+      <!-- End Div: Suggestions -->
+
+      <div>
+        <button id="export-password-btn">Export to TXT</button>
+      </div>
+
+    <!-- End: Main Div -->
+    </div>
+
+
+
+    <!-- Add JavaScript file -->
+    <script src="script.js"></script>
+
+
+  </body>
+
+</html>
